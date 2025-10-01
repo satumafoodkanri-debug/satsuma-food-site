@@ -1,15 +1,38 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>薩摩ふうど｜SATSUMA FOOD</title>
-<meta name="description" content="地域の恵み × 健康志向。鹿児島発・無添加＆グルテンフリー。薩摩ふうどは、鹿児島の風土をいただくブランドです。">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<!-- Swiper -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<link rel="stylesheet" href="style.css">
+  <title>薩摩ふうど｜SATSUMA FOOD</title>
+  <meta name="description" content="地域の恵み × 健康志向。鹿児島発・無添加＆グルテンフリー。薩摩ふうどは、鹿児島の風土をいただくブランドです。">
+
+  <!-- Speed: preconnect（preload 画像は削除） -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <!-- 必要ならフォントだけ preload（サイズ小さく効果あり） -->
+  <link rel="preload" as="font" href="./shigoto3/ShigotoMemogaki-Regular-1-02.ttf" type="font/ttf" crossorigin>
+
+  <!-- Brand -->
+  <meta name="theme-color" content="#A38F24">
+  <link rel="icon" type="image/jpeg" href="./Designer.jpeg">
+
+  <!-- OGP / Twitter -->
+  <link rel="canonical" href="https://satumafoodkanri-debug.github.io/satsuma-food-site/">
+  <meta property="og:site_name" content="薩摩ふうど｜SATSUMA FOOD">
+  <meta property="og:url" content="https://satumafoodkanri-debug.github.io/satsuma-food-site/">
+  <meta property="og:title" content="薩摩ふうど｜SATSUMA FOOD">
+  <meta property="og:description" content="地域の恵み × 健康志向。鹿児島発・無添加＆グルテンフリー。薩摩ふうどは、鹿児島の風土をいただくブランドです。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://satumafoodkanri-debug.github.io/satsuma-food-site/Designer.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Libs & Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
+
+
 <body>
 
 <!-- ===== HEADER ===== -->
@@ -27,7 +50,7 @@
     <nav aria-label="primary">
       <ul>
         <li><a href="#commit">こだわり</a></li>
-        <li><a href="#b2b">お取引</a></li>
+        <!--<li><a href="#b2b">お取引</a></li>-->
         <li><a href="#products">商品</a></li>
       </ul>
     </nav>
@@ -42,8 +65,8 @@
       <div class="swiper" id="heroSwiper">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
-          <div class="swiper-slide"
-               data-bg='{"type":"image","url":"https://images.unsplash.com/photo-1472396961693-142e6e269027?w=2400&auto=format&fit=crop","overlay":0.22}'>
+         <div class="swiper-slide"
+  data-bg='{"type":"image","url":"https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1600&q=70","overlay":0.22}'>
             <div class="slide-inner">
               <div>
                 <h2 class="slide-title">鹿児島の風土をいただく。</h2>
@@ -55,7 +78,7 @@
 
           <!-- Slide 2 -->
           <div class="swiper-slide"
-               data-bg='{"type":"image","url":"https://images.unsplash.com/photo-1505253216365-8b5c9d1a3d79?w=2400&auto=format&fit=crop","overlay":0.30}'>
+  data-bg='{"type":"image","url":"https://images.unsplash.com/photo-1505253216365-8b5c9d1a3d79?auto=format&fit=crop&w=1600&q=70","overlay":0.30}'>
             <div class="slide-inner">
               <div>
                 <h2 class="slide-title">無添加・グルテンフリーという設計。</h2>
