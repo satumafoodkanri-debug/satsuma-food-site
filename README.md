@@ -1,6 +1,6 @@
 # 薩摩ふうど｜SATSUMA FOOD
 
-![薩摩ふうど](./Designer.jpeg)
+![薩摩ふうど](./satsuma_food_logo1.png)
 
 **地域の恵み × 健康志向。鹿児島発・無添加＆グルテンフリー。**
 
