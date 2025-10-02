@@ -7,14 +7,14 @@
 
 /* ===== Brand tokens ===== */
 :root {
-  --brand: #A38F24;   /* DIC242s 近似（C36/M44/Y86） */
-  --ink: #000;        /* K100 */
+  --brand: #A38F24;
+  --ink: #000;
   --muted: #6b7280;
   --line: #ece7df;
   --bg: #fbf8f2;
   --radius: 22px;
   --shadow: 0 18px 40px rgba(0, 0, 0, .08);
-  --stage-overlay: .20; /* スライド背景オーバーレイ 0..1 */
+  --stage-overlay: .20;
 }
 
 /* ===== リセット・ベース ===== */
@@ -113,7 +113,7 @@ nav a:hover {
 
 /* ===== Stage (スクロール同期：背景＋スライド) ===== */
 .stage {
-  height: 420vh;
+  height: 300vh;
   position: relative;
   background: #000;
 }
@@ -191,10 +191,6 @@ nav a:hover {
   letter-spacing: .05em;
   line-height: 1.8;
   text-align: left;
-}
-
-/* 縦書き時の英数字を正立させる */
-.vertical {
   -webkit-text-orientation: mixed;
   -ms-writing-mode: tb-rl;
 }
@@ -205,12 +201,16 @@ nav a:hover {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0, 0, 0, .25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
 }
 
 .kv-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* ===== セクション共通 ===== */
@@ -250,9 +250,8 @@ nav a:hover {
   gap: 48px;
   width: min(1100px, 94%);
   margin: 96px auto;
-  flex-wrap: wrap;
   opacity: 0;
-  transform: translateY(22px); /* 初期状態（GSAPでフェードイン） */
+  transform: translateY(22px);
 }
 
 .split.reverse {
@@ -397,6 +396,16 @@ footer {
     grid-template-columns: 1fr;
   }
   
+  /* Split layoutを縦積みに */
+  .split {
+    flex-direction: column !important;
+  }
+  
+  .split .text,
+  .split .image {
+    flex: 1 1 100%;
+  }
+  
   .features {
     grid-template-columns: 1fr 1fr;
   }
@@ -413,5 +422,9 @@ footer {
 @media (max-width: 640px) {
   nav ul {
     display: none;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
   }
 }
