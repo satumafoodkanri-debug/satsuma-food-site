@@ -111,11 +111,12 @@ nav a:hover {
   background: #0000000d;
 }
 
-/* ===== Stage (スクロール同期：背景＋スライド) ===== */
+/* ===== Stage (スクロール同期:背景+スライド) ===== */
 .stage {
   height: 300vh;
   position: relative;
   background: #000;
+  margin-top: -70px; /* ヘッダー高さ分を相殺 */
 }
 
 .stage .sticky {
@@ -123,6 +124,7 @@ nav a:hover {
   top: 0;
   height: 100vh;
   overflow: hidden;
+  padding-top: 70px; /* ヘッダー分のパディング */
 }
 
 .stage .bg {
@@ -226,6 +228,13 @@ nav a:hover {
 .sec-lead {
   margin: 0 0 22px;
   color: var(--muted);
+}
+
+/* 初期状態を透明にする */
+.slide-title,
+.slide-lead,
+.kv-img {
+  opacity: 0;
 }
 
 /* ===== こだわり（エディトリアル + グラデ背景） ===== */
@@ -344,7 +353,7 @@ nav a:hover {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow);
-}
+ }
 
 .product .img {
   aspect-ratio: 4/3;
@@ -373,6 +382,12 @@ nav a:hover {
 .price {
   font-weight: 900;
   margin-top: 8px;
+}
+
+/* 商品タイトルと特定セクションのh3を通常フォントに変更 */
+.products,
+.split .text {
+  font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 /* ===== Footer ===== */
